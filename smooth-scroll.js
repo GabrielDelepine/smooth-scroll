@@ -2,16 +2,17 @@
  * - smooth-scroll.js -
  * Licence MIT
  * Written by Gabriel Delépine
- * Version 1.0 (2013-10-27)
+ * Version 1.0.1 (2013-11-08)
  * Requirement : No one, it is a framework-free fonction (ie : You do not need to include any other file in your page such as jQuery)
  * Fork-me in github : https://github.com/Yappli/smooth-scroll/
  * */
 (function() // Code in a function to create an isolate scope
 {
-    var speed = 500;
-    var moving_frequency = 15; // Affects performance !
-    var links = document.getElementsByTagName('a');
-    var href;
+    var speed = 500,
+        moving_frequency = 15, // Affects performance !
+        height_fixed_header = 0, // For layout with header with position:fixed. Write here the height of your header for your anchor don't be hiden behind
+        links = document.getElementsByTagName('a'),
+        href;
     for(var i=0; i<links.length; i++)
     {   
         href = (links[i].attributes.href === undefined) ? null : links[i].attributes.href.nodeValue.toString();
@@ -25,7 +26,7 @@
                 {
                     var hop_count = speed/moving_frequency
                     var getScrollTopDocumentAtBegin = getScrollTopDocument();
-                    var gap = (getScrollTopElement(element) - getScrollTopDocumentAtBegin) / hop_count;
+                    var gap = (getScrollTopElement(element) - getScrollTopDocumentAtBegin - height_fixed_header) / hop_count;
                     
                     for(var i = 1; i <= hop_count; i++)
                     {
