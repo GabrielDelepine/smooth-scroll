@@ -23,10 +23,10 @@ If your layout include a position:fixed header your anchors will hide themself b
 ===
 Limitation
 ===
-The anchor active is not wrotten in the url. If you need-it feel free to push a modification or open an issue if you don't know how to do it by yourself.
+The anchor active is wrotten in the url for modern browser only. For old browser, it might be possible to get compatibility with https://github.com/browserstate/history.js
 
 ===
 Length
 ===
 
-The length of the minified version is 421 bytes ! (After gzip)
+The length of the minified version is 432 bytes ! (After gzip)
