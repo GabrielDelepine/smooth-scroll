@@ -21,6 +21,11 @@ Just include the js file to your page. All anchors links will be animate smoothy
 If your layout include a position:fixed header your anchors will hide themself behind. To fix-it, look-at the param height_fixed_header.
 
 ===
+Bower
+===
+If you are using bower, just run `bower  install smooth-scroll`
+
+===
 Limitation
 ===
 The anchor active is wrotten in the url for modern browser only. For old browser, it might be possible to get compatibility with https://github.com/browserstate/history.js

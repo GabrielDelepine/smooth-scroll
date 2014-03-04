@@ -1,0 +1,13 @@
+{
+  "name": "smooth-scroll",
+  "homepage": "https://github.com/Yappli/smooth-scroll",
+  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Yappli/smooth-scroll.git"
+  },
+  "main": ["./smooth-scroll.js"],
+  "ignore": [
+    "*.min.js"
+  ]
+}
