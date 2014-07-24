@@ -2,7 +2,8 @@
  * - autoSmoothScroll -
  * Licence MIT
  * Written by Gabriel Delépine
- * Current version  1.2 (2014-02-13)
+ * Current version  1.3 (2014-07-23)
+ * Previous version  1.2 (2014-02-13)
  * Previous version 1.0.1 (2013-11-08)
  * Previous version 1.0 (2013-10-27)
  * Requirement : No one, it is a framework-free fonction (ie : You do not need to include any other file in your page such as jQuery)
@@ -68,6 +69,6 @@
     
     var getScrollTopDocument = function()
     {
-        return document.documentElement.scrollTop !== undefined ? document.documentElement.scrollTop : document.body.scrollTop;
+        return window.pageYOffset !== undefined ? window.pageYOffset : document.documentElement.scrollTop !== undefined ? document.documentElement.scrollTop : document.body.scrollTop;
     };
 })(window);
