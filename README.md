@@ -1,7 +1,7 @@
-smooth-scroll
+Smooth-Scroll
 =============
 
-smooth scrolling anchors page without framework dependency.
+Adds smooth scrolling to anchor links within page without any framework dependencies.
 
 ===
 Demo
@@ -9,16 +9,16 @@ Demo
 http://yappli.github.io/smooth-scroll/
 
 ===
-Requirement
+Dependencies
 ===
-No one, it is a framework-free fonction (ie : You do not need to include any other file in your page such as jQuery)
+None. Smooth scroll is a framework-free function (ie : You do not need to include any other file in your page such as jQuery)
 
 ===
-How to use
+How To Use
 ===
-Just include the js file to your page. All anchors links will be animate smoothy.
+Include the `smooth-scroll.js` file to your web page. All anchor links will  scroll smoothly.
 
-If your layout include a position:fixed header your anchors will hide themself behind. To fix-it, look-at the param height_fixed_header.
+If your layout includes a `position: fixed` header, your anchors will be hidden behind your header. To fix-it, change the `height_fixed_header` parameter within `smooth-scroll.js` to `1`.
 
 ===
 Bower
@@ -26,12 +26,12 @@ Bower
 If you are using bower, just run `bower  install smooth-scroll`
 
 ===
-Limitation
+Compatibility
 ===
-The anchor active is wrotten in the url for modern browser only. For old browser, it might be possible to get compatibility with https://github.com/browserstate/history.js
+Smooth scroll is compatible for modern browsers only. For older browsers, it might be possible to get compatibility with https://github.com/browserstate/history.js
 
 ===
-Length
+Size
 ===
 
-The length of the minified version is 432 bytes ! (After gzip)
+The size of the minified version is 432 bytes ! (After gzip)
