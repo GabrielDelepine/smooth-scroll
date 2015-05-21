@@ -58,18 +58,17 @@
     var getScrollTopElement =  function(e)
     {
         var top = height_fixed_header * -1;
-
-        while (e.offsetParent != undefined && e.offsetParent != null)
-        {
-            top += e.offsetTop + (e.clientTop != null ? e.clientTop : 0);
-            e = e.offsetParent;
-        }
         
-        return top;
+        do {
+            top += element.offsetTop  || 0;
+            element = element.offsetParent;
+        } while(element);
+        
+        return top
     };
     
     var getScrollTopDocument = function()
     {
-        return window.pageYOffset !== undefined ? window.pageYOffset : document.documentElement.scrollTop !== undefined ? document.documentElement.scrollTop : document.body.scrollTop;
+        return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
     };
 })(window);
