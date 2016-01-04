@@ -7,8 +7,8 @@
  * Previous version 1.2.0 (2014-02-13)
  * Previous version 1.0.1 (2013-11-08)
  * Previous version 1.0.0 (2013-10-27)
- * Requirement : No one, it is a framework-free fonction (ie : You do not need to include any other file in your page such as jQuery)
- * Fork-me in github : 
+ * Requirement : None, it is a framework-free function (i.e. you do not need to include any other file in your page such as jQuery)
+ * Fork-me on github : https://github.com/Yappli/smooth-scroll
  * */
 (function(window, undefined) // Code in a function to create an isolate scope
 {
@@ -19,7 +19,7 @@
         links = document.getElementsByTagName('a'),
         href;
     
-    for(var i=0; i<links.length; i++)
+    for(var i = 0; i < links.length; i++)
     {
         href = (links[i].attributes.href === undefined) ? null : links[i].attributes.href.nodeValue.toString();
         if(href !== null && href.length > 1 && href.indexOf('#') != -1) // href.substr(0, 1) == '#'
@@ -29,26 +29,26 @@
                 var element,
                     href = this.attributes.href.nodeValue.toString(),
                     url = href.substr(0, href.indexOf('#')),
-                    id = href.substr(href.indexOf('#')+1);
-                if(element = document.getElementById(id))
+                    id = href.substr(href.indexOf('#') + 1);
+                if (element = document.getElementById(id))
                 {
-                    
+
                     var hop_count = (speed - (speed % moving_frequency)) / moving_frequency, // Always make an integer
                         getScrollTopDocumentAtBegin = getScrollTopDocument(),
                         gap = (getScrollTopElement(element) - getScrollTopDocumentAtBegin) / hop_count;
                     
-                    if(window.history && typeof window.history.pushState == 'function')
-                        window.history.pushState({}, undefined, url+'#'+id);// Change URL for modern browser
-                    
-                    for(var i = 1; i <= hop_count; i++)
+                    if (window.history && typeof window.history.pushState == 'function')
+                        window.history.pushState({}, undefined, url + '#' + id); // Change URL for modern browser
+
+                    for (var i = 1; i <= hop_count; i++)
                     {
                         (function()
                         {
-                            var hop_top_position = gap*i;
-                            setTimeout(function(){  window.scrollTo(0, hop_top_position + getScrollTopDocumentAtBegin); }, moving_frequency*i);
+                            var hop_top_position = gap * i;
+                            setTimeout(function(){  window.scrollTo(0, hop_top_position + getScrollTopDocumentAtBegin); }, moving_frequency * i);
                         })();
                     }
-                    
+
                     return false;
                 }
             };
@@ -64,7 +64,7 @@
             top += e.offsetTop + (e.clientTop != null ? e.clientTop : 0);
             e = e.offsetParent;
         }
-        
+
         return top;
     };
     
