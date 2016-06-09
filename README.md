@@ -6,7 +6,7 @@ Adds smooth scrolling to anchor links within page without any framework dependen
 ===
 Demo
 ===
-http://yappli.github.io/smooth-scroll/
+http://gabrieldelepine.github.io/smooth-scroll/
 
 ===
 Dependencies
