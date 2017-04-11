@@ -1,0 +1,19 @@
+{
+  "name": "@gabriel-delepine/smooth-scroll",
+  "version": "1.4.0",
+  "description": "smooth scrolling anchors page without framework dependency",
+  "main": "smooth-scroll.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielDelepine/smooth-scroll.git"
+  },
+  "author": "Gabriel Delépine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GabrielDelepine/smooth-scroll/issues"
+  },
+  "homepage": "https://github.com/GabrielDelepine/smooth-scroll#readme"
+}
